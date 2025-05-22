@@ -11,13 +11,8 @@ public class TaskTest {
     public static void main(String[] args) {
         emf = Persistence.createEntityManagerFactory("PU");
         EntityManager em = emf.createEntityManager();
+        new Menu(em);
 
-        try {
-            new Register(em);
 
-        } finally {
-            em.close();
-            emf.close();
-        }
     }
 }
